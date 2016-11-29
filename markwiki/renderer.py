@@ -14,7 +14,8 @@ wiki_link_extension = MarkWikiLinkExtension()
 
 def render_markdown_txt(content):
     extensions = [wiki_link_extension, 'fenced_code', 'codehilite',
-                  'toc(anchorlink=True)']
+                 'codehilite', 'abbr', 'attr_list', 'def_list', 'footnotes',
+                 'tables', 'smart_strong', 'toc(anchorlink=True)']
     return markdown.markdown(content, safe_mode='escape',
                              extensions=extensions, output_format='html5')
 
